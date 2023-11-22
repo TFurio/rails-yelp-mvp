@@ -1,0 +1,16 @@
+<%= form_with(model: @restaurant, local: true) do |form| %>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content, rows: 4 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rating %>
+    <%= f.number_field :rating, min: 0, max: 5 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Submit review", class: "btn btn-primary" %>
+  </div>
+<% end %>
